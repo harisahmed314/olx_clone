@@ -3,7 +3,7 @@ import { Navigate } from "react-router";
 import { AllPostContext } from "../../contextStore/ContextAllPost";
 import Pagination from "../Pagination/Pagination";
 import "./allposts.css";
-import PostCards from "../PostsCards/PostCards";
+import PostCards from "../../Componets/PostsCards/PostCards";
 function AllPosts() {
   const { allPost } = useContext(AllPostContext);
   

@@ -4,7 +4,6 @@ import {PostContext} from "../../contextStore/PostContext";
 import "./postcards.css"
 import { useNavigate } from 'react-router';
 
-
 function PostCards({product,index}) {
     let {setPostContent} = useContext(PostContext)//at the time of onClick on post ,the specified post item assigned to postContent by setPostContent function and it will be stored in a global context PostContext
  
