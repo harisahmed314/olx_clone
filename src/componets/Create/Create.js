@@ -3,11 +3,12 @@ import "./Create.css";
 import Header from "../Header/Header";
 import { Firebase } from "../../firebase/config";
 import { AuthContext } from "../../contextStore/AuthContext";
-import { useHistory } from "react-router";
 import GoLoading from "../Loading/GoLoading";
+import { useNavigate} from "react-router";
+
 const Create = () => {
   const { user } = useContext(AuthContext);
-  const history = useHistory();
+  const navigation = useNavigate();
   let [name, setName] = useState("");
   let [category, setCategory] = useState("");
   let [price, setPrice] = useState("");
@@ -34,7 +35,7 @@ const Create = () => {
               createdAt: date,
             })
             .then(() => {
-              history.push("/");
+              navigation("/");
             });
         });
       });
