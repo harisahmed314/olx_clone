@@ -1,11 +1,21 @@
-import React from 'react';
-import HomePage from './HomePage';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ContextAuth from "./contextStore/AuthContext";
+import ContextPost from "./contextStore/PostContext";
+import MainRoutes from "./Routes/MainRoutes";
+import ContextAllPost from "./contextStore/ContextAllPost";
+
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
+    <div>
+      <ContextAuth>
+        <ContextAllPost>
+          <ContextPost>
+            <MainRoutes />
+          </ContextPost>
+        </ContextAllPost>
+      </ContextAuth>
     </div>
   );
 }
