@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import "./dynamicposts.css"
-import {AllPostContext} from "../../contextStore/AllPostContext" ;
-import PostCards from '../PostCards/PostCards';
+import {AllPostContext} from "../../contextStore/ContextAllPost" ;
+import PostCards from '../PostsCards/PostCards';
 import {Link} from "react-router-dom";
 
 function DynamicPosts({category}) {
