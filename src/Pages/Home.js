@@ -1,4 +1,4 @@
-import React,{useEffect,useContext} from 'react';
+import React, { useEffect, useContext } from 'react';
 
 
 import { Firebase } from '../firebase/config';
@@ -9,27 +9,25 @@ import Posts from '../Componets/Posts/Posts';
 import Banner from '../Componets/Banner/Banner';
 
 function Home(props) {
- const {setUser}=useContext(AuthContext)
-  useEffect(()=>{
-    
-    Firebase.auth().onAuthStateChanged((user)=>{
+  const { setUser } = useContext(AuthContext)
+  useEffect(() => {
+
+    Firebase.auth().onAuthStateChanged((user) => {
       setUser(user)
-      
+
     })
-    
- 
-  },[setUser])
-  
+
+
+  }, [setUser])
+
   return (
     <div className="homeParentDiv">
-      <Header/>
-      <Banner/>
-      <Posts/>
-      
-      <Footer/>
+      <Header />
+      <Banner />
+      <Posts />
+      <Footer />
     </div>
   );
 }
 
 export default Home;
- 

@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from "../Componets/Header/Header"
-import AllPosts from '../../src/componets/ViewMoreAllPosts/AllPosts'
+import AllPosts from '../Componets/ViewMoreAllPosts/PostsAll'
 
 function ViewMore() {
     return (
         <div>
-         <Header/>
-         <AllPosts/>        
+            <Header />
+            <AllPosts />
         </div>
     )
 }
