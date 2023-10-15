@@ -1,7 +1,7 @@
 import React, { Fragment, useContext } from "react";
-import Create from "../Componets/Create/Create";
 import { AuthContext } from "../contextStore/AuthContext";
 import Login from "../Componets/Login/Login";
+import Create from "../Componets/Create/Create";
 
 const Createpost = () => {
   const { user } = useContext(AuthContext);
@@ -9,7 +9,7 @@ const Createpost = () => {
   return (
     <Fragment>
       {user ? (
-        <Create />
+        <Create/>
       ) : (
         <>          
           {alert("You must login first")} <Login />

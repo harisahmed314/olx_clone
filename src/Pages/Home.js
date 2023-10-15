@@ -1,12 +1,12 @@
 import React,{useEffect,useContext} from 'react';
 
-import Header from '../Componets/Header/Header';
-import Banner from '../Componets/Banner/Banner';
 
-import Posts from '../Componets/Posts/Posts';
-import Footer from '../Componets/Footer/Footer';
 import { Firebase } from '../firebase/config';
 import { AuthContext } from '../contextStore/AuthContext';
+import Header from '../Componets/Header/Header';
+import Footer from '../Componets/Footer/Footer';
+import Posts from '../Componets/Posts/Posts';
+import Banner from '../Componets/Banner/Banner';
 
 function Home(props) {
  const {setUser}=useContext(AuthContext)
@@ -22,10 +22,11 @@ function Home(props) {
   
   return (
     <div className="homeParentDiv">
-      <Header />
-      <Banner />
-      <Posts />
-      <Footer />
+      <Header/>
+      <Banner/>
+      <Posts/>
+      
+      <Footer/>
     </div>
   );
 }
